@@ -1,0 +1,14 @@
+{
+  "name": "decentralized-app",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "mobile:start": "npm --workspace apps/mobile run start",
+    "typecheck": "npm --prefix apps/mobile exec tsc --noEmit -p ../../tsconfig.json",
+    "test": "node --test /home/runner/work/Decentralized_App/Decentralized_App/tests/**/*.test.mjs"
+  }
+}

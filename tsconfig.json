@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noEmit": true
+  },
+  "include": [
+    "packages/**/*.ts",
+    "apps/mobile/App.tsx",
+    "apps/mobile/src/**/*.ts",
+    "apps/mobile/src/**/*.tsx"
+  ]
+}
