@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "mobile:start": "npm --workspace apps/mobile run start",
-    "typecheck": "npm --prefix apps/mobile exec tsc --noEmit -p ../../tsconfig.json",
+    "typecheck": "cd apps/mobile && npx tsc --noEmit -p ../../tsconfig.json",
     "test": "node --test /home/runner/work/Decentralized_App/Decentralized_App/tests/**/*.test.mjs"
   }
 }

@@ -1,5 +1,3 @@
-import { createHash } from "node:crypto";
-
 export type QueueItem<T> = {
   id: string;
   payload: T;
@@ -44,7 +42,11 @@ export class IpfsMediaService {
   private readonly media = new Map<string, Uint8Array>();
 
   async put(encryptedData: Uint8Array): Promise<StoredMedia> {
-    const cid = createHash("sha256").update(encryptedData).digest("hex");
+    let hash = 0;
+    for (const byte of encryptedData) {
+      hash = (hash * 31 + byte) >>> 0;
+    }
+    const cid = hash.toString(16).padStart(8, "0");
     this.media.set(cid, encryptedData);
     return { cid, encrypted: encryptedData };
   }
