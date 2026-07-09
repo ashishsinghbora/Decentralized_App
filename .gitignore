@@ -1,0 +1,4 @@
+node_modules/
+apps/mobile/node_modules/
+apps/mobile/.expo/
+apps/mobile/dist/
